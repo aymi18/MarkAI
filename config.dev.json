@@ -16,15 +16,16 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100085330421655"
+    "100071118324739",
+    "100095262681590"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Artificial Intelligence",
-  "prefix": "-",
+  "nickNameBot": "YUNO",
+  "prefix": "*",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -61,7 +62,7 @@
     }
   },
   "autoRestart": {
-    "time": null,
+    "time": ,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
   "autoUptime": {
