@@ -1,5 +1,5 @@
 const axios = require('axios');
-const PREFIXES = ["ai", "-claire"];
+const PREFIXES = ["ai", "yuno2"];
 
 async function askClaire(api, event, message) {
     try {
@@ -14,12 +14,12 @@ async function askClaire(api, event, message) {
             message.unsend(messageId);
             console.log('Sent answer as a reply to the user');
         } else {
-            throw new Error('Invalid or missing response from API');
+            throw new Error('sorry d ko mahanap');
         }
     } catch (error) {
-        console.error(`Failed to get an answer: ${error.stack || error.message}`);
+        console.error(`wala akong mahanap may error: ${error.stack || error.message}`);
         api.sendMessage(
-            `Failed to get an answer. Please try again. Details: ${error.message}`,
+            `may error ulitin mo. Details: ${error.message}`,
             event.threadID
         );
     }
@@ -32,7 +32,7 @@ function startsWithPrefix(body) {
 
 module.exports = {
     config: {
-        name: 'claire',
+        name: 'yuno2',
         version: '2.5',
         author: 'JV Barcenas && LiANE For AI',
         credits: 'JV Barcenas && LiANE For AI',
@@ -41,13 +41,13 @@ module.exports = {
         hasPermission: 2,
         category: 'Ai',
         commandCategory: 'Ai',
-        description: 'Baliw na babaeng ai',
+        description: 'Baliw na yuno ai',
         usages: '[prompt]',
         shortDescription: {
-            en: 'Baliw na babaeng ai',
+            en: 'Baliw na yuno ai',
         },
         longDescription: {
-            en: 'Baliw na babaeng ai',
+            en: 'Baliw na yuno ai',
         },
         guide: {
             en: '{pn} [prompt]',
