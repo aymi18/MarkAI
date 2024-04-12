@@ -1,14 +1,13 @@
 {
-  "facebookAccount": {
-    "email": "yoyamerch+24@yandex.ru",
-    "password": "yunobot052824",
-    "2FASecret": "",
-    "i_user": "",
-    "proxy": "" ,
-    "userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
-    "intervalGetNewCookie": 4320,
-    "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
-  },
+  "facebookAccount": {},
+  "email": "yoyamerch+24@yandex.ru",
+  "password": "yunobot052824",
+  "2FASecret": "",
+  "i_user": "",
+  "proxy": null,
+  "userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
+  "intervalGetNewCookie": 1440,
+  "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE",
   "antiInbox": false,
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
@@ -18,20 +17,15 @@
   },
   "adminBot": [
     "100095262681590",
-    "100071118324739"
-    
+	  "100071118324739"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "OWNER": "yoya",
-  "AGE": "18",
-  "GENDER": "FEMALE",
   "nickNameBot": "YUNO",
-  "FACEBOOK": "https://www.facebook.com/100095262681590",
-  "prefix": "!",
+  "prefix": "*",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -42,15 +36,15 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "aymiyoy@gmail.com",
-      "clientId": "49265065133-m96coan8c8epqhoq9q63jchr976fj3l3.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//0493OCY_k9JyUCgYIARAAGAQSNwF-L9Ir0zSTxWv4QC_1yttsn6Df8f_9CQG3bTXvmkCGNhVT3tGQQ91NzT1rY6JKfqykasicUXk",
-      "apiKey": "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"
+      "email": "markleemeniola@gmail.com",
+      "clientId": "982523941925-sm544j8mbr0ie6jl4a91gfdsg47ibrcs.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04qZNNkc59U8DCgYIARAAGAQSNwF-L9IrGVMGG-1weLI0ZSAtl-nlcryJj0YIZ1mCyWV9au1SJ27ZLLMU8t-e9DkV-Aemob-fPK8",
+      "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6Lcw4ZIpAAAAALdS-HyG94W2F4Gf7MgKswiRBpWo",
-      "secretKey": "6Lcw4ZIpAAAAAH7APjQ_RoU3CI4nhkDlQmOrtyQr"
+      "siteKey": "6LdDJTQmAAAAAD1tFHZENJS9sYr-m_sgM7E9ZP0t",
+      "secretKey": "6LdDJTQmAAAAAOkaK667n9k5Umbn4hmfCL5ASSRY"
     }
   },
   "dashBoard": {
@@ -60,13 +54,12 @@
   },
   "serverUptime": {
     "enable": false,
-    "port": 3000,
+    "port": 3001,
     "socket": {
       "enable": true,
       "channelName": "uptime",
-      "verifyToken": "AJ3mQqe9wrL8sF5NAwJuSteH",
-			"url": ""
-		}
+      "verifyToken": ""
+    }
   },
   "autoRestart": {
     "time": 3600000,
@@ -74,8 +67,8 @@
   },
   "autoUptime": {
     "enable": true,
-    "timeInterval": 8640,
-    "url": "${process.env.DevURL}.sisko.replit.dev/",
+    "timeInterval": 180,
+    "url": "",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
   "autoLoadScripts": {
@@ -88,17 +81,17 @@
   "autoReloginWhenChangeAccount": false,
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
-    "disable": false,
-    "timeRestart": 0,
-    "delayAfterStopListening": 0,
-    "logNoti": false,
+    "enable": true,
+    "timeRestart": 3600000,
+    "delayAfterStopListening": 2000,
+    "logNoti": true,
     "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
   },
   "notiWhenListenMqttError": {
     "notes": "This is the message when the bot is listening to the mqtt server and the mqtt server stops working due to account problems such as: locked acc, blocked due to spam,... bot will automatically send notifications to parts of your settings. You must change enable to true to use this feature. See bot/login/handlerWhenListenHasError.js file for details on how it works",
     "gmail": {
-      "enable": false,
-      "emailGetNoti": "",
+      "enable": true,
+      "emailGetNoti": "markleemeniola@gmail.com",
       "note": "Bot will use gmailAccount to send email to emailGetNoti, can send notifications to many email, separate by comma or space, example: \"example1@gmail.com example2@gmail.com\" (without backslash)"
     },
     "telegram": {
@@ -114,10 +107,13 @@
     }
   },
   "hideNotiMessage": {
-    "wrongCommand": false,
+    "commandNotFound": false,
     "adminOnly": false,
     "threadBanned": false,
-    "userBanned": false
+    "userBanned": false,
+    "needRoleToUseCmd": false,
+    "needRoleToUseCmdOnReply": false,
+    "needRoleToUseCmdOnReaction": false
   },
   "logEvents": {
     "disableAll": false,
@@ -139,13 +135,7 @@
     "selfListen": false,
     "selfListenEvent": true,
     "autoMarkDelivery": false,
-    "autoReconnect": true,
+    "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
-  },
-  "whiteListModeThread": {
-    "enable": false,
-    "whiteListThreadIds": [],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
 }
